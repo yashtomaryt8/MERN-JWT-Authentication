@@ -38,3 +38,5 @@ app.listen(PORT, () => {
 # 7 In Package.json -> "server": "nodemon server.js"
  
 # 8 MongoDB connection -> 
+
+npm install axios react-router-dom react-toastify

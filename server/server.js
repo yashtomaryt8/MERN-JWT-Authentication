@@ -10,11 +10,13 @@ const app = express()
 const PORT = process.env.PORT || 4000
 connectDB()
 
+const allowedOrigins = ['http://localhost:5173']
+
 // Middlewares
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
-app.use(cors({credentials: true}))
+app.use(cors({origin: allowedOrigins ,credentials: true}))
 
 
 app.get("/", (req, res) => {
